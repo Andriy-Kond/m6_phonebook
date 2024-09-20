@@ -1,8 +1,31 @@
 import { useState } from "react";
+import { Notify } from "notiflix/build/notiflix-notify-aio";
+import { addContactToPhonebook } from "reduxTools/phonebookSlice";
+import { nanoid } from "nanoid";
+import { useDispatch, useSelector } from "react-redux";
+import { phonebookContacts, phonebookFilter } from "reduxTools/store";
 
-function ContactForm({ addContact }) {
+function ContactForm() {
+  const dispatch = useDispatch();
+  const contacts = useSelector(phonebookContacts);
+  const filter = useSelector(phonebookFilter);
+
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
+
+  const addContact = pushedContact => {
+    // const name = e.currentTarget.elements.name.value;
+    // const number = e.currentTarget.elements.number.value;
+    const { name, number } = pushedContact;
+    const newContact = { id: nanoid(), name, number };
+
+    const isExistContact = contacts.find(contact => contact.name === name);
+
+    isExistContact
+      ? Notify.warning(`Contact ${name} already in contact book`)
+      : dispatch(addContactToPhonebook(newContact));
+    // setContacts(prevContacts => [...prevContacts, newContact]);
+  };
 
   const handleContact = e => {
     const { name, value } = e.currentTarget;

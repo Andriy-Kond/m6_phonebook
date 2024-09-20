@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/m6_phonebook/static/js/main.9ed2c22a.js",
+    "index.html": "/m6_phonebook/index.html",
+    "main.9ed2c22a.js.map": "/m6_phonebook/static/js/main.9ed2c22a.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.9ed2c22a.js"
+  ]
+}

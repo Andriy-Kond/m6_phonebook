@@ -1,3 +1,4 @@
-export { default as Home } from "./Home";
-export { default as Counter } from "./Counter";
-export { default as NotFoundPage } from "./Counter";
+export { default as HomePage } from "./HomePage";
+export { default as CounterPage } from "./CounterPage";
+export { default as PhonebookPage } from "./PhonebookPage";
+export { default as NotFoundPage } from "./NotFoundPage";

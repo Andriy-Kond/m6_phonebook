@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { lazy } from "react";
 
 import Layout from "components/Layout";
-import { Home } from "pages";
+import { HomePage } from "pages";
 
 const lazyImport = componentName =>
   lazy(() =>
@@ -15,7 +15,8 @@ const lazyImport = componentName =>
 // const Counter = lazy(() => import("pages/Counter"));
 // const NotFoundPage = lazy(() => import("pages/NotFoundPage"));
 
-const Counter = lazyImport("Counter");
+const CounterPage = lazyImport("CounterPage");
+const PhonebookPage = lazyImport("PhonebookPage");
 const NotFoundPage = lazyImport("NotFoundPage");
 
 function App() {
@@ -23,8 +24,9 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="counter/*" element={<Counter />} />
+          <Route index element={<HomePage />} />
+          <Route path="counter" element={<CounterPage />} />
+          <Route path="phonebook" element={<PhonebookPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

@@ -1,15 +1,14 @@
 const { useDispatch, useSelector } = require("react-redux");
-const { increment, decrement } = require("reduxTools/slice");
+
+const { increment, decrement } = require("reduxTools/counterSlice");
 const { counterValue } = require("reduxTools/store");
 
 function Counter() {
   const dispatch = useDispatch();
   const count = useSelector(counterValue);
-
   return (
     <>
       <h2>Counter</h2>
-
       <div>
         <button
           aria-label="Increment value"
@@ -23,6 +22,7 @@ function Counter() {
           Decrement
         </button>
       </div>
+      ;
     </>
   );
 }

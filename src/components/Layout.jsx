@@ -8,6 +8,7 @@ function Layout() {
 
       <Link to="/">Home</Link>
       <Link to="counter">Counter</Link>
+      <Link to="phonebook">Phonebook</Link>
 
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />

@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/m6_phonebook/static/js/main.9ed2c22a.js",
+    "main.js": "/m6_phonebook/static/js/main.e318a31c.js",
     "index.html": "/m6_phonebook/index.html",
-    "main.9ed2c22a.js.map": "/m6_phonebook/static/js/main.9ed2c22a.js.map"
+    "main.e318a31c.js.map": "/m6_phonebook/static/js/main.e318a31c.js.map"
   },
   "entrypoints": [
-    "static/js/main.9ed2c22a.js"
+    "static/js/main.e318a31c.js"
   ]
 }

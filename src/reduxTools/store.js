@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { persistedCounterReducer } from "./slice.";
+import { persistedCounterReducer } from "./slice";
 
 import {
   persistStore,

@@ -3,12 +3,11 @@ import { Notify } from "notiflix/build/notiflix-notify-aio";
 import { addContactToPhonebook } from "reduxTools/phonebookSlice";
 import { nanoid } from "nanoid";
 import { useDispatch, useSelector } from "react-redux";
-import { phonebookContacts, phonebookFilter } from "reduxTools/store";
+import { phonebookContacts } from "reduxTools/store";
 
 function ContactForm() {
   const dispatch = useDispatch();
   const contacts = useSelector(phonebookContacts);
-  const filter = useSelector(phonebookFilter);
 
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
